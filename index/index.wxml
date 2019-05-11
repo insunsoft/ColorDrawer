@@ -1,0 +1,22 @@
+<drawer avatarUrl=""  drawerClass="drawerclass" drawerBarClass="drawerbarclass" canuse="{{canuse}}" > 
+  <view  slot="icon" class='text-white icon-list' ></view>
+  <text slot="drawerTitle">自定义封装ColorUI抽屉组件</text>
+  <text slot="drawerSubTitle">by 10ngui</text>
+  <text slot="title">自定义</text>
+  <view  slot="avatarUrl" class='response' style='margin-top:100rpx'>
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <view slot="menu" wx:for="{{drawerMenu}}" class="cu-item arrow" wx:key>
+    <view class='content' url='{{item.url}}' hover-class='none' bindtap=''>
+      <text class='{{item.icon}} text-green'></text>
+      <text class='text-grey'>slot {{item.title}}</text>
+    </view>
+  </view>
+
+
+  <!-- 主页内容 -->
+  <view slot="content">
+  <button class='margin' bindtap='banuse'>模拟禁止抽屉右滑出来</button>
+    <button class='margin' bindtap='allowuse'>模拟允许抽屉右滑出来</button>
+  </view>
+</drawer>

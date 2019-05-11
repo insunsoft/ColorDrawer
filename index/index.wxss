@@ -1,0 +1,20 @@
+.intro {
+  margin: 30px;
+  text-align: center;
+}
+
+.drawerclass {
+  background: transparent;
+}
+
+
+
+.response {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background: rgb(255, 255, 255);
+  margin: 0 auto;
+  margin-bottom: 20rpx;
+  overflow: hidden;
+}

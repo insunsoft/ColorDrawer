@@ -1,0 +1,36 @@
+<view class='Page' bind:touchend="{{canuse?'DrawerMoveEnd':''}}" bind:touchstart="{{canuse?'DrawerMoveStart':''}}">
+
+  <!-- DrawPage -->
+  <view class="DrawerPage {{showMenu?'show':''}}">
+    <view class="cu-custom" style="height:{{CustomBar}}px;">
+      <view class="cu-bar tabbar bg-img fixed  {{drawerBarClass}} " style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
+        <view class="action">
+          <slot name="icon" bindtap='showModal'></slot>
+        </view>
+        <view class="content" style="top:{{StatusBar}}px">
+          <slot name="title"></slot>
+        </view>
+      </view>
+    </view>
+    <slot name="content"></slot>
+  </view>
+  <view class="DrawerClose {{showMenu?'show':''}}" bindtap='hideModal'>
+    <text class='icon-pullright'></text>
+  </view>
+
+  <!-- DrawWindow -->
+  <view class="DrawerWindow {{showMenu?'show':''}}  {{drawerClass}}">
+    <view class='padding-xl text-center text-white'>
+      <slot name="avatarUrl"></slot>
+      <view class='text-xl'>
+        <slot name="drawerTitle"></slot>
+      </view>
+      <view class='margin-top-sm'>
+        <slot name="drawerSubTitle"></slot>
+      </view>
+    </view>
+    <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg">
+      <slot name="menu"></slot>
+    </view>
+  </view>
+</view>

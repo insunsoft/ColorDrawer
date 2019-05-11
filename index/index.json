@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "drawer": "../component/drawer/drawer"
+  },
+  "navigationBarTextStyle": "white",
+  "disableSwipeBack": true,
+  "disableScroll": true
+}
